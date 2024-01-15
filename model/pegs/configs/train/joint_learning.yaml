@@ -1,0 +1,65 @@
+model:
+    arch: pegs
+    # use lora
+    use_lora: True
+    # enable {perception, generation}
+    enable_perception: True
+    enable_generation: True
+    # tokenizer setting
+    padding_side: "right"
+    max_text_length: 1024
+    # prefix prompt
+    use_prefix_prompt: True
+    prefix_prompt: "You are an open-domain empathy dialog chatbot. You have been asked to small talk with humans."
+    # low resource
+    low_resource: False
+    # load from pretrained checkpoint
+    checkpoint: [
+        "outputs/pretrain_perception/checkpoint_perception.pth",
+        "outputs/sft_generation/checkpoint_generation.pth"
+    ]
+
+
+datasets:
+    instruction:
+        use: True
+        vision_processor:
+            train:
+                name: "blip2_image_train"
+                image_size: 224
+        text_processor:
+            train:
+                name: "blip_caption"
+        sample_ratio: 1
+
+
+run:
+    learning_rate: 1e-4
+    lr_scheduler: "cosine_with_warmup"
+    beta1: 0.9
+    beta2: 0.95
+    eps: 1e-06
+    weight_decay: 0.05
+
+    num_train_epochs: 4
+    warmup_steps: 1000
+    iters_per_epoch:
+
+    batch_size_train: 6
+    batch_size_eval: 64
+    num_workers: 4
+    
+    seed: 42
+    outputs_dir: "outputs/joint_learning"
+      
+    amp: True
+    resume_ckpt_path: null
+    
+    evaluate: False 
+    train_splits: ["train"]
+      
+    device: "cuda"
+    distributed: True
+    find_unused_parameters: True
+    world_size: 1
+    dist_url: "env://"

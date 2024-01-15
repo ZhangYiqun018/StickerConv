@@ -1,0 +1,23 @@
+Complete the EVALUATION task based on the given RESPONSE and CONVERSATION.
+
+# Conversation History:
+{conversation}
+
+# Response:
+{response}
+
+# Evaluation Criteria:
+Response-Conversation Consistency(1-5):
+Scoring Criteria:
+1. Low Consistency: The response significantly deviates from or contradicts the main topic and key points of the conversation history.
+2. Poor Consistency: The response is somewhat related to the conversation history but misses several key points or introduces unrelated elements.
+3. Moderate Consistency: The response is generally aligned with the conversation history but has minor discrepancies or omissions in details.
+4. Good Consistency: The response is well-aligned with the conversation history, maintaining the main topic and key points with minor deviations.
+5. High Consistency: The response perfectly aligns with the conversation history, accurately reflecting all key points and the main topic without deviation.
+
+# Evaluation Process:
+1. Read the conversation history carefully and identify the main topic and key points discussed.
+2. Read the response and compare it to the conversation history. Check if the response is consistent with the information and context provided in the conversation history.
+3. Assign a score for consistency on a scale of 1 to 5, where 1 is the lowest and 5 is the highest based on the Evaluation Criteria.
+
+{format_instruction}

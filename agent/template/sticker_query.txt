@@ -1,0 +1,10 @@
+{summary}
+{name}'s message: {message}
+{name} want to use a sticker to {intent}
+
+Generate a query to retrieve an appropriate sticker from the vector database that aligns with the {name}'s message, intent and emotional tone.
+The sticker database contains a wide range of stickers, each with a vector representing its emotional tone and content. Stickers are categorized by emotions such as Neutral, Happiness, Anger, Sadness, Surprise, Fear, Disgust, and themes like celebration, motivation, and humor.
+Query example (Do not repeat the example):
+{example}
+
+Query:

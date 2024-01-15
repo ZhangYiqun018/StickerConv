@@ -1,0 +1,1 @@
+from sticker_process import get_image_knowledge

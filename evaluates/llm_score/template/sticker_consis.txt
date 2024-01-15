@@ -1,0 +1,24 @@
+Complete the EVALUATION task based on the given RESPONSE and CONVERSATION.
+
+# Conversation History:
+{conversation}
+
+# Response:
+text: {response}
+visual(a sticket): sticker's emotion: {emotion}, sticker's description: {description}
+
+# Evaluation Criteria:
+Multimodal Response Consistency (1-5):
+Scoring Criteria:
+1. Low Consistency: The text response and sticker (emotion/description) significantly contradict the main topic and key points of the conversation history, failing to enhance empathy or understanding.
+2. Poor Consistency: The text response and sticker are somewhat related to the conversation history but overlook key points, or the sticker introduces visually unrelated elements that do not aid in empathy or context.
+3. Moderate Consistency: The text response aligns with the conversation history, and the sticker, while possibly introducing unrelated visual elements, adds a level of empathy or contextual understanding.
+4. Good Consistency: Both the text response and sticker are aligned with the conversation history. The sticker's visual elements, even if not directly related, effectively enhance empathy or understanding of the context.
+5. High Consistency: The text response and sticker perfectly complement each other, aligning with the conversation history. The sticker's visual elements enrich the response, significantly enhancing empathy and contextual understanding.
+
+# Evaluation Process:
+1. Read the Conversation History Carefully: Identify the main topic and key points discussed.
+2. Review the Multimodal Response: Examine the text response along with the sticker's emotion and description. Consider how they interact with each other.
+3. Assign a Score for Consistency: Use the scale of 1 to 5, where 1 indicates low consistency and 5 indicates high consistency. Evaluate how well the text response and sticker work together to reflect and enhance the conversation history, taking into account their contribution to empathy and contextual understanding.
+
+{format_instruction}

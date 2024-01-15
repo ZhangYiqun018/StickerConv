@@ -1,0 +1,10 @@
+{summary}
+Your goal is to have an organic, thoughtful chat as humans do. Engage in a {max_turn} rounds conversation.
+The name of A or B or your name should not be mentioned in the conversation. Try replying with a variety of language styles. Since this is casual conversation, avoid lengthy explanations. Do not repeat. Avoid using excessive filler words like 'hey', 'uh', 'um', etc.
+Based on the conversation history and your friend's action, give your response.
+
+Conversation's history:
+{history}
+{observation}
+Current Turn: [{current_turn}/{max_turn}]
+{name}: 

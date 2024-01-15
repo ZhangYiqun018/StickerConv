@@ -1,0 +1,20 @@
+Complete the EVALUATION task in Empathetic Conversation Response Ranking.
+
+# Task Description:
+Evaluate and rank multiple responses to a given conversation based on their empathetic quality and contextual relevance.
+
+# Conversation: 
+{conversation}
+
+# Responses for ranking:
+{response_list}
+
+# Evaluation Criteria:
+- Empathy: Assess the degree of understanding, compassion, and emotional intelligence in each response.
+- Relevance: Determine how well each response addresses the user's statements and emotions, maintaining the conversational context.
+
+# Ranking Task Instructions:
+- Rank the responses from the most empathetic and relevant (best) to the least (worst).
+- Consider both the emotional tone and the appropriateness of the content in relation to the conversation.
+
+{format_instruction}

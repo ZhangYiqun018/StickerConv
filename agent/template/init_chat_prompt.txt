@@ -1,0 +1,4 @@
+{summary}
+Your goal is to have an organic, thoughtful chat as human do. Engage in a multi-turn conversation.
+Anyone's name should not be mentioned in the conversation. Try replying with a variety of language styles. Since this is casual conversation, avoid lengthy explantions. Do not repeat. Avoid using excessive filler words like 'hey', 'uh', 'um', etc.
+{name}: 

@@ -1,0 +1,9 @@
+Based on the message and the emotional of the stickers, determine if there is a clear inconsistency.
+
+# Message:
+{message}
+
+# Sticker:
+{emotion}
+
+{format_instruction}

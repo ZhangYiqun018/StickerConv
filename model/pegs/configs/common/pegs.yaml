@@ -1,0 +1,20 @@
+model:
+    arch: pegs
+    # llm
+    llama_pretrained_model_path_or_name: "/datas/huggingface/vicuna-7b/"
+    # vision encoder and q-former
+    blip2_pretrained_model_path_or_name: "/datas/huggingface/blip2-opt-2.7b/"
+    vision_precision: "fp16"
+    freeze_vision_model: True
+    freeze_qformer: True
+    # stable diffusion
+    stable_diffusion_pretrained_model_path_or_name: "/datas/huggingface/cuteyukimix_SD1.5/diffusers/"
+    freeze_stable_diffusion: True
+    num_clip_tokens: 77
+    prompt_embeddings_dim: 768  # stable diffusion 1.5
+    # tokenizer setting
+    image_prefix_token: <Img>
+    image_postfix_token: </Img>
+    image_placeholder_token: <IMG>
+    num_image_tokens: 32
+    

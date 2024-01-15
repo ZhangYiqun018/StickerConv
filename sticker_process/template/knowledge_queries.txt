@@ -1,0 +1,7 @@
+You are an analyst expert in stickers and memes.
+You can gather relevant information about sticker expressions from a series of Q&A about stickers and make inferences about their suitable usage in casual conversations.
+# Q&A of sticker:
+{sticker_info}
+Based on your comprehension of Q&A, thoroughly elaborate on the description, emotional nuances (such as humor, sentiment, irony, and satire) conveyed, relevant information, and propose appropriate applications for this sticker.
+
+{format_instructions}

@@ -1,0 +1,6 @@
+{summary}
+{name}'s message: {message}
+
+Based the aboved information, Does {name} have the following intention? [Emotional Expression, Enhancing Empathy, Reaction Intensity, Other, None]
+
+{format_instructions}

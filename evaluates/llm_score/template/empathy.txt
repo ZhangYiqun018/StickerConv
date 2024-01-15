@@ -1,0 +1,24 @@
+# Task Overview:
+Evaluate the level of empathy in a text-only response based on a given conversation.
+
+# Conversation:
+{history}
+
+# Response for Evaluation:
+{response}
+
+# Emapthy Reting Scale:
+1. Very Low Empathy: The response shows minimal or no understanding, compassion, or appropriateness.
+2. Low Empathy: The response demonstrates a basic level of understanding or compassion, but is lacking in most areas.
+3. Moderate Empathy: The response displays a fair level of understanding and compassion, with some relevance to the conversation.
+4. High Empathy: The response shows a strong level of understanding, compassion, and appropriateness to the conversation context.
+5. Very High Empathy: The response excellently demonstrates understanding, compassion, and is highly appropriate to the conversation context.
+
+# Evaluation Steps:
+1. Read the Conversation and Response: Understand the context and emotional tone of the conversation.
+2. Assess Understanding: Evaluate how well the response acknowledges the user's feelings or situation.
+3. Evaluate Compassion: Determine the level of kindness and concern in the response.
+4. Assign an Empathy Rating: Based on your assessment, rate the response on the 1-5 scale.
+5. Justify Your Rating: Provide reasons for your rating, citing specific parts of the response.
+
+{format_instruction}

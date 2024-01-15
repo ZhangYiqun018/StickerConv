@@ -1,0 +1,60 @@
+model:
+    arch: pegs
+    # use lora
+    use_lora: False
+    # enable {perception, generation}
+    enable_perception: False
+    enable_generation: True
+    # tokenizer setting
+    padding_side: "right"
+    max_text_length: 77
+    # low resource
+    low_resource: False
+    # load from pretrained checkpoint
+    checkpoint: "outputs/pretrain_generation/checkpoint_generation.pth"
+    
+
+
+datasets:
+    sticker_text:
+        use: True
+        vision_processor:
+            train:
+                name: "blip2_image_train"
+                image_size: 224
+        text_processor:
+            train:
+                name: "blip_caption"
+        sample_ratio: 1
+
+
+run:
+    learning_rate: 5e-5
+    lr_scheduler: "cosine_with_warmup"
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1e-06
+    weight_decay: 0.05
+
+    num_train_epochs: 4
+    warmup_steps: 200
+    iters_per_epoch:
+
+    batch_size_train: 28
+    batch_size_eval: 64
+    num_workers: 8
+    
+    seed: 42
+    outputs_dir: "outputs/sft_generation"
+      
+    amp: True
+    resume_ckpt_path: null
+    
+    evaluate: False 
+    train_splits: ["train"]
+      
+    device: "cuda"
+    distributed: True
+    find_unused_parameters: False
+    world_size: 1
+    dist_url: "env://"

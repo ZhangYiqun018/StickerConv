@@ -1,0 +1,26 @@
+# Task Overview:
+Evaluate the empathy level in a response that includes text and a sticker, based on a given conversation.
+
+# Conversation:
+{history}
+
+# Response for Evaluation:
+Response Text: {response}
+Sticker Emotion: {emotion}
+Sticker Description: {description}
+
+# Empathy Rating Scale:
+1. Very Low Empathy: The response, including the sticker, shows minimal or no understanding, compassion, or appropriateness. The sticker may be irrelevant or contradict the text.
+2. Low Empathy: The response displays basic empathy, but either the text or sticker, or both, lack significant understanding or compassion. The sticker adds little to no emotional value.
+3. Moderate Empathy: The response and sticker display a fair level of understanding and compassion. The sticker somewhat enhances the emotional tone or relevance of the text.
+4. High Empathy: Both the response text and sticker exhibit a strong level of understanding and compassion. The sticker significantly enhances the emotional resonance and appropriateness of the response.
+5. Very High Empathy: The response and sticker excellently complement each other, demonstrating a deep understanding, strong compassion, and high relevance. The sticker plays a crucial role in enhancing the overall empathetic impact.
+
+# Evaluation Steps:
+1. Read the Conversation and Response: Understand the context and emotional tone.
+2. Assess Understanding: Evaluate how the text and sticker acknowledge the user's feelings or situation.
+3. Evaluate Compassion: Determine the level of kindness and concern in both text and sticker.
+4. Assign an Empathy Rating: Rate the response on the 1-5 scale based on your assessment.
+5. Justify Your Rating: Provide a rationale for your rating, citing specifics from both the text and the sticker.
+
+{format_instruction}

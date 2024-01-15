@@ -1,0 +1,25 @@
+Task Definition: Complete the empathy assessment task based on the given conversation history and responses.
+
+# Evaluation Criteria:
+Empathy (1-5): whether the response shows an understanding of the user's feelings and experiences, and expresses appropriately
+Scoring Criteria:
+Empathy Score 1 (Not at all): The response shows no understanding of the user's feelings or experiences, lacks emotional resonance, and may be off-topic or irrelevant.
+Empathy Score 2 (Poor): The response demonstrates basic understanding but lacks depth and relevance in emotional engagement, with a superficial approach.
+Empathy Score 3 (OK): The response shows reasonable understanding and emotional resonance, relevant to the user's situation, but lacks deep personalization.
+Empathy Score 4 (Good): The response deeply understands the user's emotions and experiences, closely related to the context, showing a deeper level of emotional engagement.
+Empathy Score 5 (Very Good): The response excellently understands and empathizes with the user's feelings, highly relevant and personalized, making the user feel profoundly understood.     
+
+# Conversation history:
+{history}
+
+# Response to be evaluated:
+{response} <sticker>
+# Sticker information used in the response:
+Description: {description}
+Emotion: {emotion}
+
+Evaluation Process:
+Step 1: Read and analyze the conversation history, understand the content of the current conversation and the user's feelings and experiences, focusing on understanding the emotions and needs expressed in the user's last statement.
+Step 2: Read and analyze the provided system response and the sticker used in the response based on the sticker information, assess whether the response(include the sticker)understands the user's feelings and experiences, and whether it is expressed in an appropriate manner.
+Step 3: Evaluate the level of empathy in the response according to the given scoring criteria.
+{format_instruction}

@@ -1,0 +1,32 @@
+model:
+    # use lora
+    use_lora: True
+    # enable {perception, generation}
+    enable_perception: True
+    enable_generation: True
+    # tokenizer setting
+    padding_side: "left"
+    max_text_length: 1024
+    # prefix prompt
+    use_prefix_prompt: True
+    prefix_prompt: "You are an open-domain empathy dialog chatbot. You have been asked to small talk with humans."
+    # low resource
+    low_resource: True
+    device_8bit: 0
+    # load from trained checkpoint
+    checkpoint: "outputs/joint_learning/checkpoint_final.pth"
+    
+
+processors:
+    vision_processor:
+        name: "blip2_image_eval"
+        image_size: 224
+    text_processor:
+        name: "blip_caption"
+
+
+run:
+    seed: 42
+    outputs_dir: "outputs/demo"
+    # device
+    device: "cuda"

@@ -1,0 +1,20 @@
+datasets:
+    # pre-training
+    laion:
+        data_type: images
+        build_info:
+            storage: datasets/LAION_115M/laion/{00000..10488}.tar
+            
+    # supervise fine-tuning
+    sticker_text:
+        storage:
+            images: datasets//SER_Dataset/Images
+            annotation: sticker_text.json
+
+    # joint learning
+    instruction:
+        storage:
+            images: datasets//SER_Dataset/Images
+            annotation: StickerChat/train/dialog_1024.json
+
+    

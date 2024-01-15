@@ -1,0 +1,6 @@
+{summary}
+{name}'s message: {message}
+{name} want to use a sticker to {intent}
+Please select a sticker that you want to use:
+{sticker_prompt}
+Only output the idx of sticker. (An integer)
