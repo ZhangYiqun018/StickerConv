@@ -17,4 +17,4 @@ Note: 我们使用的Embedding model是bge-large-en-v1.5, 可以直接使用hugg
 
 
 ## :people_holding_hands:项目主要贡献者
-[张逸群](@ZhangYiqun018), [孔繁恒](@friedrichor), [王培东](), [孙爽](@NanShanhai), [王凌帅](@WangLingS)
+[@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
