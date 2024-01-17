@@ -15,6 +15,14 @@ Google Drive download url: [Goodle Drive](https://drive.google.com/file/d/1GYRSo
 
 Note: 我们使用的Embedding model是bge-large-en-v1.5, 可以直接使用huggingface提供的权重。
 
+## :placard:Examples
+
+Qualitative examples from our PEGS model.
+
+|   |   |
+:-------------------------:|:-------------------------:
+![conv1](figure/case_positive_1.png) | ![conv2](figure/case_positive_2.png)
+![conv3](figure/case_negative_1.png) | ![conv4](figure/case_negative_2.png)
 
 ## :people_holding_hands:项目主要贡献者
 [@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
