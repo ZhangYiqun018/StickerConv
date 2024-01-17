@@ -109,13 +109,13 @@ if __name__ == '__main__':
     
     vicuna_data = load_dataset(
         'json', data_files=vicuna, split = 'train'
-    ).select(range(100))
+    )
     chatglm3_data = load_dataset(
         'json', data_files=chatglm3, split = 'train'
-    ).select(range(100))
+    )
     pegs_data = load_dataset(
         'json', data_files=pegs, split = 'train'
-    ).select(range(100))
+    )
     
     rank_scorer = RankingEvaluator(
         llm = ChatOpenAI(
