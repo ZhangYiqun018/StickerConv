@@ -40,6 +40,7 @@
 <p align="center"><font face="Times New Roman">Examples of conversations by users interacting with PEGS. Users can chat with multimodal content (text and stickers) and will receive multimodal empathetic responses. Left: a conversation characterized by positive emotion (happiness). Right: a conversation characterized by negative emotion (sadness).</font>
 </p>
 
+## :four_leaf_clover: Overview
 
 ## Related Work
 [SER30K: A Large-Scale Dataset for Sticker Emotion Recognition](https://dl.acm.org/doi/10.1145/3503161.3548407)
