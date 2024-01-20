@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    StickerChat
+    <h1>StickerChat</h1>
 </p>
 <p align="center">
   <font face="Times New Roman" color=grey size="6"> StickerConv: Generating Multimodal Empathetic Responses from Scratch </font>
