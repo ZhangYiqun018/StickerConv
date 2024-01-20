@@ -1,28 +1,91 @@
-# :rainbow:StickerChat: Generating Multimodal Empathetic Responses from Scratch
 
-## :four_leaf_clover:Overview
+<!-- <p align="center" width="100%">
+    <img src="./figure/logo.png" alt="StickerConv" style="width: 20%; display: block; margin: auto;"></a>
+</p> -->
+<p align="center">
+  <font face="Times New Roman" color=grey size="6"> StickerConv: Generating Multimodal Empathetic Responses from Scratch </font>
+</p>
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/LICENSE-Apache 2-blue" alt="license">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/MODEL-Huggingface-yellow" alt="huggingface">
+  </a>
+  <a href="">
+   <img src="https://img.shields.io/badge/Online-Demo-red" alt="demo">
+  </a>
+  <a href="">
+   <img src="https://img.shields.io/badge/Paper-Arxiv-Green" alt="paper">
+  </a>
 
-![Agent System](./figure/flow.png)
+  <!-- <a href="https://goreportcard.com/report/github.com/songquanpeng/one-api">
+    <img src="https://goreportcard.com/badge/github.com/songquanpeng/one-api" alt="GoReportCard"> -->
+  </a>
+</p>
 
-![PEGS structure](./figure/model_structure.png)
+<!-- <p align="center">
+  <a href="https://llama.family">Demo</a>
+</p>
+<p align="center">
+  <a href="https://huggingface.co/FlagAlpha/Atom-7B-Chat">基于Vicuna-7B的开源多模态共情对话大模型 PEGS-7B</a> -->
+</p>
+</br></br>
 
+## :four_leaf_clover: Overview
 
-## :atom_symbol:dataset
+<p align="center">
+<img src="./figure/flow.png" width=650>
+</p>
+<p align="center">
+    <font face="Times New Roman", colo=grey>the Structure of StickerConv Agent System
+</p>
+
+<p align="center">
+<img src="./figure/model_structure.png" width=650>
+</p>
+<p align="center">
+    <font face="Times New Roman", colo=grey>the Structure of PEGS
+</p>
+
+## :atom_symbol: StickerConv Dataset
+<p align="center">
+<img src="figure/dataset_example.png" width=300>
+</p>
+
+<p align="center"><font face="Times New Roman">An example of multimodal conversation in our StickerConv dataset. Both parties can utilize the stickers to express their emotions, which enhances interactivity and expression. Assistant can empathize with the user according to the conversation
+</p>
+
+### Download Url
+huggingface: [huggingface](https://huggingface.co/datasets/NEUDM/StickerConv)
 
 百度网盘下载链接: [百度网盘](https://pan.baidu.com/s/1q15ShDXZ0nXuY73VsVN5iQ?pwd=maqk)
 
-Google Drive download url: [Goodle Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
+Google Drive Download Url: [Goodle Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
 
-Note: 我们使用的Embedding model是bge-large-en-v1.5, 可以直接使用huggingface提供的权重。
+### :speech_balloon: Note:
+1. SER30K的原始数据集可以在此申请: [SER30K](https://github.com/nku-shengzheliu/SER30K)
+2. 我们使用的Embedding model是[bge-large-en-v1.5](https://huggingface.co/BAAI/bge-large-en-v1.5), 可以直接使用huggingface提供的权重。
 
-## :placard:Examples
+## :computer: Case Study
 
-Qualitative examples from our PEGS model.
+<p align="center">
+<img src="figure/case_negative.png" width=350>
+</p>
+<p align="center"><font face="Times New Roman" color="grey">Negative Case Study</font>
+</p>
+<p align="center">
+<img src="figure/case_positive.png" width=350>
+</p>
+<p align="center"><font face="Times New Roman" color="grey">Positive Case Study</font></p>
 
-|   |   |
-:-------------------------:|:-------------------------:
-![conv1](figure/case_positive_1.png) | ![conv2](figure/case_positive_2.png)
-![conv3](figure/case_negative_1.png) | ![conv4](figure/case_negative_2.png)
 
-## :people_holding_hands:项目主要贡献者
+## :people_holding_hands: 项目主要贡献者
 [@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
+
+## 相关论文
+[SER30K: A Large-Scale Dataset for Sticker Emotion Recognition](https://dl.acm.org/doi/10.1145/3503161.3548407)
+
+[Llava-v1: Visual Instruction Tuning](http://arxiv.org/abs/2304.08485)
+
+[Generative Agents: Interactive Simulacra of Human Behavior](http://arxiv.org/abs/2304.03442)
