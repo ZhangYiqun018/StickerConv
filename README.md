@@ -1,16 +1,20 @@
 # StickerConv: Generating Multimodal Empathetic Responses from Scratch
 
+
+<a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/Vision-CAIR/MiniGPT-4'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
+
+
 ## :four_leaf_clover: Overview
 
 <p align="center">
-<img src="./figure/flow.png" width=650>
+<img src="./figure/Agent4SC.png" width=650>
 </p>
 <p align="center">
     <font face="Times New Roman", colo=grey>the Structure of StickerConv Agent System
 </p>
 
 <p align="center">
-<img src="./figure/model_structure.png" width=650>
+<img src="./figure/PEGS.png" width=650>
 </p>
 <p align="center">
     <font face="Times New Roman", colo=grey>the Structure of PEGS
@@ -18,7 +22,7 @@
 
 ## :atom_symbol: StickerConv Dataset
 <p align="center">
-<img src="figure/dataset_example.png" width=300>
+<img src="figure/StickerConv_example.png" width=300>
 </p>
 
 <p align="center"><font face="Times New Roman">An example of multimodal conversation in our StickerConv dataset. Both parties can utilize the stickers to express their emotions, which enhances interactivity and expression. Assistant can empathize with the user according to the conversation
@@ -38,15 +42,15 @@ Google Drive Download Url: [Goodle Drive](https://drive.google.com/file/d/1GYRSo
 ## :computer: Case Study
 
 <p align="center">
-<img src="figure/case_negative.png" width=350>
+<img src="figure/case_positive.png" width=500>
 </p>
-<p align="center"><font face="Times New Roman" color="grey">Negative Case Study</font>
+<p align="center"><font face="Times New Roman" color="grey">Examples of conversations with positive emotions. Users can chat with multimodal content (text and stickers) and will receive positive multimodal responses.</font>
 </p>
 <p align="center">
-<img src="figure/case_positive.png" width=350>
+<img src="figure/case_negative.png" width=500>
 </p>
-<p align="center"><font face="Times New Roman" color="grey">Positive Case Study</font></p>
-
+<p align="center"><font face="Times New Roman" color="grey">Examples of conversations with negative emotions. Our model can empathize with users who are suffering from negative emotions, such as sadness (left) or anger (right). Users will be comforted and guided to positive sentiments.</font>
+</p>
 
 ## :people_holding_hands: 项目主要贡献者
 [@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
