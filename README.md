@@ -1,35 +1,4 @@
-<p align="center" width="100%">
-    <h1>StickerChat</h1>
-</p>
-<p align="center">
-  <font face="Times New Roman" color=grey size="6"> StickerConv: Generating Multimodal Empathetic Responses from Scratch </font>
-</p>
-<p align="center">
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/LICENSE-Apache 2-blue" alt="license">
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/badge/MODEL-Huggingface-yellow" alt="huggingface">
-  </a>
-  <a href="">
-   <img src="https://img.shields.io/badge/Online-Demo-red" alt="demo">
-  </a>
-  <a href="">
-   <img src="https://img.shields.io/badge/Paper-Arxiv-Green" alt="paper">
-  </a>
-
-  <!-- <a href="https://goreportcard.com/report/github.com/songquanpeng/one-api">
-    <img src="https://goreportcard.com/badge/github.com/songquanpeng/one-api" alt="GoReportCard"> -->
-  </a>
-</p>
-
-<!-- <p align="center">
-  <a href="https://llama.family">Demo</a>
-</p>
-<p align="center">
-  <a href="https://huggingface.co/FlagAlpha/Atom-7B-Chat">基于Vicuna-7B的开源多模态共情对话大模型 PEGS-7B</a> -->
-</p>
-</br></br>
+# StickerConv: Generating Multimodal Empathetic Responses from Scratch
 
 ## :four_leaf_clover: Overview
 
