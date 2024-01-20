@@ -1,7 +1,6 @@
-
-<!-- <p align="center" width="100%">
+<p align="center" width="100%">
     <img src="./figure/logo.png" alt="StickerConv" style="width: 20%; display: block; margin: auto;"></a>
-</p> -->
+</p>
 <p align="center">
   <font face="Times New Roman" color=grey size="6"> StickerConv: Generating Multimodal Empathetic Responses from Scratch </font>
 </p>
