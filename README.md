@@ -33,7 +33,7 @@ huggingface: [huggingface](https://huggingface.co/datasets/NEUDM/StickerConv)
 
 百度网盘下载链接: [百度网盘](https://pan.baidu.com/s/1q15ShDXZ0nXuY73VsVN5iQ?pwd=maqk)
 
-Google Drive Download Url: [Goodle Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
+Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
 
 ### :speech_balloon: Note:
 1. SER30K的原始数据集可以在此申请: [SER30K](https://github.com/nku-shengzheliu/SER30K)
