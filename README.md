@@ -1,7 +1,7 @@
 # StickerConv: Generating Multimodal Empathetic Responses from Scratch
 
 
-<a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/Vision-CAIR/MiniGPT-4'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
+<a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/datasets/NEUDM/StickerConv'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
 
 
 ## :four_leaf_clover: Overview
