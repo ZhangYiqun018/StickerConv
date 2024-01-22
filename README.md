@@ -32,7 +32,7 @@
 </p>
 
 ### Download Url
-huggingface: [huggingface](https://huggingface.co/datasets/NEUDM/StickerConv)
+huggingface: [StickerConv](https://huggingface.co/datasets/NEUDM/StickerConv)
 
 百度网盘下载链接: [百度网盘](https://pan.baidu.com/s/1q15ShDXZ0nXuY73VsVN5iQ?pwd=maqk)
 
