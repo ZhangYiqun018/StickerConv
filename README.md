@@ -1,7 +1,7 @@
 # StickerConv: Generating Multimodal Empathetic Responses from Scratch
 
 
-<a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/datasets/NEUDM/StickerConv'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
+<a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/abs/2402.01679'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/datasets/NEUDM/StickerConv'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
 
 ## Update
 
@@ -57,6 +57,18 @@ Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSo
 
 ## :people_holding_hands: 项目主要贡献者
 [@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
+
+## :pray: Citation
+
+If you find this work or our code useful, please consider citing:
+```
+@article{zhang2024stickerconv,
+  title={StickerConv: Generating Multimodal Empathetic Responses from Scratch},
+  author={Zhang, Yiqun and Kong, Fanheng and Wang, Peidong and Sun, Shuang and Wang, Lingshuai and Feng, Shi and Wang, Daling and Zhang, Yifei and Song, Kaisong},
+  journal={arXiv preprint arXiv:2402.01679},
+  year={2024}
+}
+```
 
 ## 相关论文
 [SER30K: A Large-Scale Dataset for Sticker Emotion Recognition](https://dl.acm.org/doi/10.1145/3503161.3548407)
