@@ -5,7 +5,7 @@
 
 ## Update
 
-2024-01-20 On going work.
+2024-01-20 Ongoing work.
 
 ## :four_leaf_clover: Overview
 
