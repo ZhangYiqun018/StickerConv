@@ -55,9 +55,6 @@ Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSo
 <p align="center"><font face="Times New Roman" color="grey">Examples of conversations with negative emotions. Our model can empathize with users who are suffering from negative emotions, such as sadness (left) or anger (right). Users will be comforted and guided to positive sentiments.</font>
 </p>
 
-## :people_holding_hands: 项目主要贡献者
-[@ZhangYiqun018](https://github.com/ZhangYiqun018), [@friedrichor](https://github.com/friedrichor), [@Control-derek](https://github.com/Control-derek), [@NanShanhai](https://github.com/NanShanhai), [@WangLingS](https://github.com/WangLingS)
-
 ## :pray: Citation
 
 If you find this work or our code useful, please consider citing:
