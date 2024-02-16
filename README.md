@@ -34,13 +34,7 @@
 ### Download Url
 huggingface: [StickerConv](https://huggingface.co/datasets/NEUDM/StickerConv)
 
-百度网盘下载链接: [百度网盘](https://pan.baidu.com/s/1q15ShDXZ0nXuY73VsVN5iQ?pwd=maqk)
-
 Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
-
-### :speech_balloon: Note:
-1. SER30K的原始数据集可以在此申请: [SER30K](https://github.com/nku-shengzheliu/SER30K)
-2. 我们使用的Embedding model是[bge-large-en-v1.5](https://huggingface.co/BAAI/bge-large-en-v1.5), 可以直接使用huggingface提供的权重。
 
 ## :computer: Case Study
 
@@ -55,19 +49,7 @@ Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSo
 <p align="center"><font face="Times New Roman" color="grey">Examples of conversations with negative emotions. Our model can empathize with users who are suffering from negative emotions, such as sadness (left) or anger (right). Users will be comforted and guided to positive sentiments.</font>
 </p>
 
-## :pray: Citation
-
-If you find this work or our code useful, please consider citing:
-```
-@article{zhang2024stickerconv,
-  title={StickerConv: Generating Multimodal Empathetic Responses from Scratch},
-  author={Zhang, Yiqun and Kong, Fanheng and Wang, Peidong and Sun, Shuang and Wang, Lingshuai and Feng, Shi and Wang, Daling and Zhang, Yifei and Song, Kaisong},
-  journal={arXiv preprint arXiv:2402.01679},
-  year={2024}
-}
-```
-
-## 相关论文
+## Related Work
 [SER30K: A Large-Scale Dataset for Sticker Emotion Recognition](https://dl.acm.org/doi/10.1145/3503161.3548407)
 
 [Llava-v1: Visual Instruction Tuning](http://arxiv.org/abs/2304.08485)
