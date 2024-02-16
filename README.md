@@ -31,11 +31,6 @@
 <p align="center"><font face="Times New Roman">An example of multimodal conversation in our StickerConv dataset. Both parties can utilize the stickers to express their emotions, which enhances interactivity and expression. Assistant can empathize with the user according to the conversation
 </p>
 
-### Download Url
-huggingface: [StickerConv](https://huggingface.co/datasets/NEUDM/StickerConv)
-
-Google Drive Download Url: [Google Drive](https://drive.google.com/file/d/1GYRSocSDL3Empc-OZYmkXdOvbhZgpNIi/view?usp=sharing)
-
 ## :computer: Case Study
 
 <p align="center">
