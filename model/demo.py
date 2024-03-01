@@ -54,19 +54,10 @@ def main(args):
             <center><B>StickerConv: Generating Multimodal Empathetic Responses from Scratch</B></center>
         </font>
     """
-    article = """
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <a href='https://neu-datamining.github.io/StickerConv'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-            <span style="margin: 0 10px;"></span> 
-            <a href='https://github.com/ZhangYiqun018/StickerConv'><img src='https://img.shields.io/badge/Github-Code-blue'></a>
-            <span style="margin: 0 10px;"></span> 
-            <a href=''><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
-        </div>
-    """
     language = """Language: English"""
     with gr.Blocks(theme) as demo_chatbot:
         gr.Markdown(title)
-        gr.HTML(article)
+        # gr.HTML(article)
         gr.Markdown(language)
         
         with gr.Row():
