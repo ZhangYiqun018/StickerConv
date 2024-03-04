@@ -1,28 +1,25 @@
 model:
     arch: pegs_rag
     # use lora
-    use_lora: True
+    use_lora: False
     # enable {perception, retrieval, generation}
-    enable_perception: True
+    enable_perception: False
     enable_retrieval: True
     enable_generation: True
     # Retrieval Setting
-    tau: 0.07  # 0.07  0.20
-    feature_accumulation_steps: 36
-    gradient_accumulation_steps: 36
+    tau: 0.07
+    feature_accumulation_steps: 6
+    gradient_accumulation_steps: 6
     train_logit_scale: False
     # tokenizer setting
-    max_text_length: 768
-    # prefix prompt
-    use_prefix_prompt: True
-    prefix_prompt: "You are an open-domain empathy dialog chatbot. You have been asked to small talk with humans."
+    max_text_length: 77
     # low resource
     low_resource: False
     # load from pretrained checkpoint
-    checkpoint: "outputs/pretrain_perception/checkpoint_retrieval_sft.pth"
+    checkpoint: "outputs/pretrain_perception/checkpoint_perception.pth"
 
 datasets:
-    instruction:
+    laion:
         use: True
         vision_processor:
             train:
@@ -35,26 +32,28 @@ datasets:
 
 
 run:
-    modes: ["captioning", "retrieval", "generation"]
-
-    # Optimizer Settings
-    learning_rate: 3e-6
-    lr_scheduler: "cosine_with_warmup"
-    beta1: 0.9
-    beta2: 0.999
-    eps: 1e-06
-    weight_decay: 1e-4
+    modes: ["retrieval", "generation"]
     
-    num_train_epochs: 10
-    warmup_steps: 2000
-    iters_per_epoch: 17084 #200 17084
+    # Optimizer Settings
+    learning_rate: 3e-5
+    lr_scheduler: "cosine_with_warmup"  # constant_with_warmup
+    beta1: 0.9
+    beta2: 0.95
+    eps: 1e-06
+    weight_decay: 0.05
 
-    batch_size_train: 3
+    # Special Operation
+    grad_clip: 1.0
+    
+    num_train_epochs: 4
+    warmup_steps: 2000
+    iters_per_epoch: 35555
+    batch_size_train: 36
     batch_size_eval: 64
     num_workers: 4
     
     seed: 42
-    outputs_dir: "outputs/joint_learning"
+    outputs_dir: "outputs/pretrain_retrieval"
       
     amp: True
     resume_ckpt_path: null

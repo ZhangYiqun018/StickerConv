@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import math
 import datetime
 import logging
 from tqdm import tqdm
@@ -64,6 +65,10 @@ class BaseRunner:
         return self.run_config.distributed
     
     @property
+    def modes(self):
+        return self.run_config.modes
+    
+    @property
     def scaler(self):
         amp = self.run_config.get("amp", False)
 
@@ -75,6 +80,14 @@ class BaseRunner:
     @property
     def checkpoint_path(self):
         return self.model_config.get("checkpoint", None)
+    
+    @property
+    def gradient_accumulation_steps(self):
+        return self.model_config.get("gradient_accumulation_steps", None)
+    
+    @property
+    def feature_accumulation_steps(self):
+        return self.model_config.get("feature_accumulation_steps", None)
     
     @property
     def outputs_dir(self):
@@ -97,10 +110,7 @@ class BaseRunner:
             )
     
     def unwrap_distributed_model(self, model):
-        if self.use_distributed:
-            return model.module
-        else:
-            return model
+        return model.module if hasattr(model, 'module') else model
     
     def build_datasets(self):
         datasets = dict()
@@ -218,10 +228,31 @@ class BaseRunner:
         for step, data in enumerate(dataloader):
             if step >= self.iters_per_epoch:
                 break
+            self.now_step += 1
+            outputs = self.model(**data, step=self.now_step, mode=self.modes)
+            if self.feature_accumulation_steps is not None:
+                loss = outputs.loss
+                lm_loss = outputs.lm_loss
+                # lm_loss = 0
+                ret_loss = outputs.ret_loss
+                gen_loss = outputs.gen_loss
 
-            outputs = self.model(**data)
-            loss = outputs.loss
-            loss.backward()
+                if math.isnan(loss):
+                    self.save_chechpoints(current_epoch)
+                    exit()
+                    
+                if self.now_step % self.feature_accumulation_steps == 0:
+                    loss = lm_loss + gen_loss + ret_loss
+                    # loss = lm_loss + gen_loss
+                    loss.backward()
+                    # ret_loss.backward()
+                else:
+                    loss = lm_loss + gen_loss
+                    loss.backward()
+                self.model.module.reset_embeddings() if hasattr(self.model, 'module') else self.model.reset_embeddings()
+            else:
+                loss = outputs.loss
+                loss.backward()
 
             if self.model_config.enable_generation:
                 self.model.module.reset_embeddings()
@@ -253,6 +284,7 @@ class BaseRunner:
         self.model.train()
         logging.info("Start training")
         self._get_parameter_number()
+        self.now_step = 0
         
         for epoch in range(self.num_train_epochs):
             self.train_one_epoch(epoch)

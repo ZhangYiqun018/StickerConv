@@ -1,5 +1,4 @@
 model:
-    arch: pegs
     # llm
     llama_pretrained_model_path_or_name: "/datas/huggingface/vicuna-7b/"
     # vision encoder and q-former
