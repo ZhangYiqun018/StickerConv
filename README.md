@@ -1,10 +1,12 @@
 # StickerConv: Generating Multimodal Empathetic Responses from Scratch
 
+<a href='https://neu-datamining.github.io/StickerConv/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://arxiv.org/abs/2402.01679'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href='https://huggingface.co/datasets/NEUDM/StickerConv'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a>
 
 ## Update
-2024-02-16 Submission version.
 
-2024-01-20 Ongoing work.
+- **2024-05-16:** Our paper is accepted by **ACL 2024 Main**! 🎉
+- **2024-02-16:** Submission version.
+- **2024-01-20:** Ongoing work.
 
 ## :four_leaf_clover: Overview
 
