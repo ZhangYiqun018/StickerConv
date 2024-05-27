@@ -3,7 +3,7 @@ from typing import Dict
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from .utils import save_result, get_llm
-from langchain_experimental.pydantic_v1 import BaseModel
+from langchain.pydantic_v1 import BaseModel
 from langchain.schema.language_model import BaseLanguageModel
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema, OutputFixingParser
 import configparser
@@ -18,6 +18,9 @@ class KnowledgeAgent(BaseModel):
     verbose: bool = False
     prompt_path: str
 
+    class Config:
+        arbitrary_types_allowed = True
+        
     def chain(self, prompt: PromptTemplate) -> LLMChain:
         return LLMChain(
             llm     = self.llm,

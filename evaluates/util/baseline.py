@@ -6,6 +6,9 @@ import concurrent.futures
 import json
 import os
 
+SYSTEM_PROMPT = "You are an open-domain empathy dialog chatbot. You have been asked to small talk with humans."
+
+
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='vicuna')
@@ -13,36 +16,40 @@ def get_args():
     parser.add_argument('--save_path', type=str)
     return parser.parse_args()
 
-def get_response(model: str, query: str, history: list = []) -> str:
+def get_response(model: str, query: str, history: list = [], model_name: str = None) -> str:
     completion = openai.ChatCompletion.create(
         model       = model,
-        messages    = make_messages(history=history, text = query),
+        messages    = make_messages(history=history, text = query, model_name=model_name),
         max_tokens  = 200,
         n           = 1,
-        stop        = ["### Human", '### Assistant'],
+        stop        = ["### Human", '### Assistant', 'ASSISTANT', 'USER'],
         temperature = 0.5
     )
     response = completion.choices[0].message.content
     return response.lstrip().strip()
 
-def make_messages(history: list, text: str) -> list:
+def make_messages(history: list, text: str, model_name: str = None) -> list:
     result = []
+    if "chatglm" in model_name:
+        result.append({
+            "role": "system", "content": SYSTEM_PROMPT
+        })
     for (query, response) in history:
         result.append({
-            "role": "user", "content": query
+            "role": "user", "content": query.replace("<IMG>", "").strip()
         })
         result.append({
-            "role": "assistant", "content": response
+            "role": "assistant", "content": response.replace("<IMG>", "").strip()
         })
     result.append({
-        "role": "user", "content": text
+        "role": "user", "content": text.replace("<IMG>", "").strip()
     })
     return result
 
-def process_data(idx, data):
+def process_data(idx, data, model_name):
     history = data['history']
     query = data['query']
-    pr_response = get_response(model = 'vicuna', query = query, history = history)
+    pr_response = get_response(model = 'vicuna', query = query, history = history, model_name=model_name)
     return {
         'idx'        : idx,
         'history'    : history,
@@ -68,7 +75,7 @@ def get_baseline_response(
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         # 使用 futures 来保持结果的顺序
-        futures = [executor.submit(process_data, idx, data) for idx, data in enumerate(datas)]
+        futures = [executor.submit(process_data, idx, data, model_name) for idx, data in enumerate(datas)]
         
         results = []
         for future in tqdm(concurrent.futures.as_completed(futures), total=len(datas)):

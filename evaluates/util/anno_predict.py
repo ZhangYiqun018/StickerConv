@@ -13,12 +13,12 @@ LLAVA_PROMPT_PATH = "/datas/zyq/research/chat_meme/sticker_process/template/capt
 GPT_PROMPT_PATH = "/datas/zyq/research/chat_meme/sticker_process/template/knowledge_queries.txt"
 
 
-def process_sticker(input_path: str, output_path: str, llm: BaseLanguageModel):
+def process_sticker(input_path: str, output_path: str, llm: BaseLanguageModel, start: int, end: int):
     dataset = load_dataset(
         'json',
         data_files = input_path,
         split = 'train'
-    ).select(range(4000, 6128))
+    ).select(range(start, end))
     print(dataset)
     
     tokenizer, model, image_processor, context_len = load_pretrained_model(
