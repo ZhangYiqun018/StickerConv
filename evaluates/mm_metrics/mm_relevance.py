@@ -3,7 +3,7 @@ from transformers import CLIPProcessor, CLIPTokenizer, CLIPModel
 import torch
 import os
 import json
-
+import argparse
 
 model_type="openai/clip-vit-base-patch32"
 processor = CLIPProcessor.from_pretrained(model_type)
@@ -11,6 +11,13 @@ clip_tokenizer = CLIPTokenizer.from_pretrained(model_type)
 clip_model = CLIPModel.from_pretrained(model_type)
 vision_model = clip_model.vision_model
 text_model = clip_model.text_model
+
+def get_sticker_freq(dataset):
+    count = 0
+    for data in dataset:
+        if len(data['pred_image']) > 0:
+            count += 1
+    return count / len(dataset) 
 
 def get_visual_embeds(session_imgs):
     # process visual elements
@@ -84,27 +91,35 @@ def get_relevance_score(hyps: dict, refs: dict):
         "clip_score_gt"         : clip_score_gt
     }
     
-
 def process(data):
     gt_msg = data['response_text']
     gt_sticker = data['response_image']
     
     pr_msg = data['pred_text_response']
     pr_sticker = data['pred_image']
+    if pr_sticker is None:
+        pr_sticker = []
+    # print(pr_sticker)
     
     refs = dict(
         text = gt_msg.replace("<IMG>", "").strip(),
-        image = '/datas/llm_datasets/SER_Dataset/Images/' + gt_sticker[0] if len(gt_sticker) > 0 else None
+        # image = '/datas/llm_datasets/SER_Dataset/Images/' + gt_sticker[0] if len(gt_sticker) > 0 else None,
+        image = '/datas/llm_datasets/' + gt_sticker[0] if len(gt_sticker) > 0 else None
     )
     hyps = dict(
         text = pr_msg.replace("<IMG>", "").strip(),
         image = pr_sticker[0] if len(pr_sticker) > 0 else None
     )
-    
     score = get_relevance_score(hyps = hyps, refs = refs)
     return score
 
 if __name__ == "__main__":
+    # parse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_path", type=str)
+    parser.add_argument("--data_type", type=str, default="pegs")
+    args = parser.parse_args()
+    
     # please refer to source codes of CLIP in HuggingFace
     logit_scale = clip_model.logit_scale.exp()
 
@@ -113,11 +128,12 @@ if __name__ == "__main__":
     from tqdm.auto import tqdm
     
     dataset = load_dataset(
-        'json', data_files = "/datas/zyq/research/chat_meme/prediction_anno_full.json", split = 'train'
+        'json', data_files = args.data_path, split = 'train'
     )
+    print(dataset)
     
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         futures = [executor.submit(
             process, data            
         ) for data in dataset]
@@ -142,8 +158,9 @@ if __name__ == "__main__":
             clip_score_gt.append(result['clip_score_gt'])
     
         
-    with open('./result/relevance_score.json', 'w') as w:
+    with open(f'./result/{args.data_type}_multimodal_score.json', 'w') as w:
         json.dump({
+            "frequency"    : get_sticker_freq(dataset),
             "precision_mm" : sum(precision_mm) / len(precision_mm),
             "recall_mm"    : sum(recall_mm) / len(recall_mm),
             "f1_mm"        : sum(f1_mm) / len(f1_mm),
