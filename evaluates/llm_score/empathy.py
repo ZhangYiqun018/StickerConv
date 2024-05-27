@@ -41,9 +41,10 @@ class EmpathyEvaluator(BaseModel):
             format_instruction = parser.get_format_instructions()
         )
         if sticker is not None:
-            prompt_path = self.sticker_empthy_prompt_path
-            kwargs['description'] = sticker['description']
-            kwargs['emotion'] = sticker['emotion']
+            prompt_path           = self.sticker_empthy_prompt_path
+            kwargs['description'] = sticker.get('description', None)
+            # kwargs['description'] = None
+            kwargs['emotion']     = sticker.get('emotion', None)
         else:
             prompt_path = self.empathy_prompt_path
         prompt = PromptTemplate.from_template(
@@ -69,7 +70,7 @@ class EmpathyEvaluator(BaseModel):
         prompt += f"user: {query}\n"
         
         if sticker is not None:
-            prompt += f"user send a sticker: user sticker's emotion: {sticker['emotion']}, user sticker's description: {sticker['description']}\n"
+            prompt += f"user send a sticker: user sticker's emotion: {sticker.get('emotion', None)}, user sticker's description: {sticker.get('description', None)}\n"
         
         return prompt
                 
