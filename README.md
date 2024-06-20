@@ -40,7 +40,14 @@
 <p align="center"><font face="Times New Roman">Examples of conversations by users interacting with PEGS. Users can chat with multimodal content (text and stickers) and will receive multimodal empathetic responses. Left: a conversation characterized by positive emotion (happiness). Right: a conversation characterized by negative emotion (sadness).</font>
 </p>
 
-## :four_leaf_clover: Overview
+## How to get the Sticker Dataset
+
+You can download the StickerConv model directly from the [Hugging Face Hub](https://huggingface.co/datasets/NEUDM/StickerConv). However, the sticker data is not included due to licensing restrictions. Please contact the original SER30K authors for access: [link to GitHub repository](https://github.com/nku-shengzheliu/SER30K).
+
+We have also prepared a separate version of the data specifically formatted for use with Large Language Models (LLMs). Please download the appropriate version based on your needs. [Formatted dataset download Link.](https://huggingface.co/datasets/Estwld/StickerConv_llm)
+
+For assistance, contact: 2210737@stu.neu.edu.cn
+
 
 ## Related Work
 [SER30K: A Large-Scale Dataset for Sticker Emotion Recognition](https://dl.acm.org/doi/10.1145/3503161.3548407)
